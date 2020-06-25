@@ -3,9 +3,9 @@ package testmod
 import "testing"
 
 func TestHello(t *testing.T) {
-    want := "Hello, Ivan!"
+    want := "Привет, Ivan!"
 
-    if got := Hello("Ivan"); got != want {
+    if got, _ := Hello("Ivan", "ru"); got != want {
         t.Errorf("Hello() = %q, want %q", got, want)
     }
 }
